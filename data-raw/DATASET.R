@@ -1,23 +1,25 @@
 # this needs to be updated for your package
 library(tidyverse)
-DiscGolf <-
-  readr::read_csv("pdga-approved-disc-golf-discs_2020-10-04T15-02-04.csv") |>
+LifeSpans <-
+  readr::read_csv("AZA_MLE_Jul2018.csv") |>
   janitor::clean_names() |>
-  mutate(
-    model = iconv(disc_model, "latin1", "ASCII", sub = ""),
-    approved_date = lubridate::mdy(approved_date)
-  ) |>
   rename(
-    diameter = diameter_cm,
-    flexibility = flexibility_kg,
-    height = height_cm,
-    manufacturer = manufacturer_distributor,
-    rim_depth = rim_depth_cm,
-    rim_thickness = rim_thickness_cm,
-    weight = max_weight_gr
-  ) %>%
-  select(
-    approved_date, class, diameter, flexibility, height,
-    manufacturer, model, rim_depth, rim_thickness, weight
-  )
-usethis::use_data(DiscGolf)
+    Species = species_common_name,
+    Sciname = scientific_name,
+    SampleSize = overall_sample_size,
+    MLE = overall_mle,
+    LowerCL = overall_ci_lower,
+    HigherCl = overall_ci_upper,
+    MaleSize = male_sample_size,
+    MaleMLE = male_mle,
+    MaleLowerCL = male_ci_lower,
+    MaleHigherCL = male_ci_upper,
+    FemaleSize = female_sample_size,
+    FemaleMLE = female_mle,
+    FemaleLowerCL = female_ci_lower,
+    FemaleHigherCL = female_ci_upper,
+    MaleDeficient = male_data_deficient,
+    FemaleDeficient = female_data_deficient
+  )%>%
+usethis::use_data(LifeSpans)
+
