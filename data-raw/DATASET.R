@@ -1,4 +1,3 @@
-# this needs to be updated for your package
 library(tidyverse)
 LifeSpans <-
   readr::read_csv("AZA_MLE_Jul2018.csv") |>

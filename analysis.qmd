@@ -1,7 +1,7 @@
 ---
-title: "Analysis of the XX dataset"
-author: "XX YOUR NAME HERE XX"
-date: "2023-10-XX"
+title: "Analysis of the LifeSpans dataset"
+author: "Camden Heafitz"
+date: "2023-10-27"
 date-format: iso
 format: pdf
 editor: source
@@ -13,14 +13,15 @@ editor: source
 library(mosaic)   
 library(tidyverse)
 # instructions to install the package
-# devtools::install_github("nicholasjhorton/DiscGolf")
-library(DiscGolf)
+# devtools::install_github("STAT231-F23/DiscGolf")
+library(LifeSpans)
 ```
 
-This file provides an overview of the XX package as well as some sample analyses.
+This file provides an overview of the LifeSpans package as well as some sample analyses.
 
-The `DiscGolf` package contains specifications for discs approved by the Professional Disc Golf Association as of October, 2020.
-This package may be of interest to those who play (or like to watch) ultimate frisbee.
+The `LifeSpans` package containes sex-specific sample sizes and mean life expectancies of 
+zoo animal species in North American zoos as of January, 2019. Association as of October, 2020.
+This package may be of interest to those who study animals or perhaps become a veterinarian. 
 
 ```{r}
 #| label: fig-myfigure
@@ -28,7 +29,7 @@ This package may be of interest to those who play (or like to watch) ultimate fr
 #| warning: false
 #| fig.width: 6
 #| fig.height: 8
-DiscGolf |>
+LifeSpans |>
   mutate(
     weight_grp = cut_number(
       weight, 
