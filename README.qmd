@@ -14,12 +14,12 @@ library(tidyverse)
 library(LifeSpans)
 ```
 
-This file describes the XX package.
+This file describes the LifeSpans package.
 
 It can be installed by running:
 
 ```
-devtools::install_github("nicholasjhorton/DiscGolf")
+devtools::install_github("STAT231-F23//LifeSpans")
 library(LifeSpans)
 ```
 
