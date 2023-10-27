@@ -20,6 +20,6 @@ LifeSpans <-
     FemaleHigherCL = female_ci_upper,
     MaleDeficient = male_data_deficient,
     FemaleDeficient = female_data_deficient
-  )%>%
+  )
 usethis::use_data(LifeSpans)
 
