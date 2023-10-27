@@ -1,12 +1,12 @@
-Package: XX
-Title: XX
+Package: LifeSpans
+Title: LifeSpans
 Version: 0.0.1
 Authors@R: 
-    person(given = "XX",
-           family = "XX",
+    person(given = "Camden",
+           family = "Heafitz",
            role = c("aut", "cre"),
-           email = "XX@amherst.edu")
-Description: XX Your description goes here.
+           email = "Cheafitz25@amherst.edu")
+Description: These data include sex-specific median life expectancies of 330 zoo animal species from North American Zoos as well as sample size and 95% confidence limits for each estimate.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
