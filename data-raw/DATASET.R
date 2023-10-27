@@ -4,22 +4,23 @@ LifeSpans <-
   readr::read_csv("AZA_MLE_Jul2018.csv") |>
   janitor::clean_names() |>
   rename(
-    Species = species_common_name,
-    Sciname = scientific_name,
-    SampleSize = overall_sample_size,
-    MLE = overall_mle,
-    LowerCL = overall_ci_lower,
-    HigherCl = overall_ci_upper,
-    MaleSize = male_sample_size,
-    MaleMLE = male_mle,
-    MaleLowerCL = male_ci_lower,
-    MaleHigherCL = male_ci_upper,
-    FemaleSize = female_sample_size,
-    FemaleMLE = female_mle,
-    FemaleLowerCL = female_ci_lower,
-    FemaleHigherCL = female_ci_upper,
-    MaleDeficient = male_data_deficient,
-    FemaleDeficient = female_data_deficient
+    species = species_common_name,
+    sciname = scientific_name,
+    taxon = taxon_class,
+    samplesize = overall_sample_size,
+    mle = overall_mle,
+    lowercl = overall_ci_lower,
+    highercl = overall_ci_upper,
+    malesize = male_sample_size,
+    malemle = male_mle,
+    malelowercl = male_ci_lower,
+    malehighercl = male_ci_upper,
+    femalesize = female_sample_size,
+    femalemle = female_mle,
+    femalelowercl = female_ci_lower,
+    femalehighercl = female_ci_upper,
+    maledeficient = male_data_deficient,
+    femaledeficient = female_data_deficient
   )
 usethis::use_data(LifeSpans)
 

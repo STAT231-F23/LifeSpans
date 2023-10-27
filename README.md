@@ -1,17 +1,17 @@
-XX DATA PACKAGE
+LIFE SPANS DATA PACKAGE
 ================
-YOUR NAME
-Invalid Date
+CAMDEN HEAFITZ
+10-27-23
 
-This file describes the XX package.
+This file describes the life spans package.
 
 It can be installed by running:
 
-    devtools::install_github("nicholasjhorton/DiscGolf")
-    library(DiscGolf)
+    devtools::install_github("STAT231-F23/LifeSpans")
+    library(LifeSpans)
 
 ``` r
-glimpse(DiscGolf)
+glimpse(LifeSpans)
 ```
 
     Rows: 1,260
