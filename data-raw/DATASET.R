@@ -21,5 +21,5 @@ LifeSpans <-
     maledeficient = male_data_deficient,
     femaledeficient = female_data_deficient
   )
-usethis::use_data(LifeSpans)
+usethis::use_data(LifeSpans, overwrite = TRUE)
 
