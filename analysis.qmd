@@ -37,7 +37,7 @@ ac_label<-LifeSpans|>
   slice(1)
 
 LifeSpans|>
-  ggplot(aes(x = malemle, y = femalemle, color = taxon)) +
+  ggplot(aes(x = malemle, y = femalemle, color = taxon, alpha = .1)) +
   geom_point() +
   geom_smooth() +
   geom_abline(intercept = 0, slope = 1, linetype = "dashed", color = "black") + 
