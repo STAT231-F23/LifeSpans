@@ -22,7 +22,7 @@ This file provides an overview of the LifeSpans package as well as some sample a
 The `LifeSpans` package contains sex-specific sample sizes and the mean life expectancy of 
 zoo animal species in North American zoos as of January, 2019. This package may be of interest to those who study animals or perhaps become a veterinarian. 
 
-```{r}
+```{r, message=FALSE}
 #| label: fig-myfigure
 #| fig.cap: "Graph showing the relationship between female mean life expectancy and male life expectancy. The males of some species, like the Andean Condor live more than 10 years longer than their females on average. Conversely, in species like the African Elephant, the females live over 10 years longer than males on average."
 #| warning: false
