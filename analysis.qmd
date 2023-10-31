@@ -24,17 +24,17 @@ zoo animal species in North American zoos as of January, 2019. This package may 
 
 ```{r}
 #| label: fig-myfigure
-#| fig.cap: "XX MY CAPTION"
+#| fig.cap: "Graph showing the relationship between female mean life expectancy and male life expectancy. The males of some species, like the Andean Condor live more than 10 years longer than their females on average. Conversely, in species like the African Elephant, the females live over 10 years longer than males on average."
 #| warning: false
 #| fig.width: 6
-#| fig.height: 8
-LifeSpans |>
-  group_by(taxon)|>
+#| fig.height: 6
+LifeSpans|>
   ggplot(aes(x = malemle, y = femalemle, color = taxon)) +
   geom_point() +
-  geom_smooth(se = FALSE) +
-  labs(x = "Male Mean Life Expectancy", y = "Female Mean Life Expectancy", color = "Taxonomic Class") +
+  geom_smooth() +
+  geom_abline(intercept = 0, slope = 1, linetype = "dashed", color = "black") + 
+  labs(x = "Male Mean Life Expectancy (Years)", y = "Female Mean Life Expectancy (Years)", color = "Taxonomic Class") +
   theme(legend.position = "top")
 ```
 
-We see in @fig-myfigure that XX add interpretation here XX.
+We see in @fig-myfigure that the mean life expectancy of males and females are fairly linear for over 300 zoo animal species. However, there are some species that deviate from this trend. The average female African Elephant, Bonobo, Asian Elephant, and Bornean Orangutan will live over 11 years longer than the average male of their respective species. All of these species are in the Mammalia taxon. Conversely, the average male Hawk-headed Parrot, Andean Condor, and Southern Cassowary will live over 12 years longer than a female. All of these animals are in the Aves taxonomic class.
