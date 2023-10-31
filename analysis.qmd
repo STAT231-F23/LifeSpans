@@ -13,15 +13,14 @@ editor: source
 library(mosaic)   
 library(tidyverse)
 # instructions to install the package
-# devtools::install_github("STAT231-F23/DiscGolf")
+# devtools::install_github("STAT231-F23/LifeSpans")
 library(LifeSpans)
 ```
 
 This file provides an overview of the LifeSpans package as well as some sample analyses.
 
-The `LifeSpans` package containes sex-specific sample sizes and mean life expectancies of 
-zoo animal species in North American zoos as of January, 2019. Association as of October, 2020.
-This package may be of interest to those who study animals or perhaps become a veterinarian. 
+The `LifeSpans` package contains sex-specific sample sizes and the mean life expectancy of 
+zoo animal species in North American zoos as of January, 2019. This package may be of interest to those who study animals or perhaps become a veterinarian. 
 
 ```{r}
 #| label: fig-myfigure
@@ -30,17 +29,11 @@ This package may be of interest to those who study animals or perhaps become a v
 #| fig.width: 6
 #| fig.height: 8
 LifeSpans |>
-  mutate(
-    weight_grp = cut_number(
-      weight, 
-      3,
-      labels = c("<175gm", "175-177gm", "177+gm")
-    )
-  ) |>
-  ggplot(aes(x = approved_date, y = flexibility, color = weight_grp)) +
+  group_by(taxon)|>
+  ggplot(aes(x = malemle, y = femalemle, color = taxon)) +
   geom_point() +
   geom_smooth(se = FALSE) +
-  labs(x = "Date of approval", y = "Flexibility (in kg)", color = "Weight group") +
+  labs(x = "Male Mean Life Expectancy", y = "Female Mean Life Expectancy", color = "Taxonomic Class") +
   theme(legend.position = "top")
 ```
 

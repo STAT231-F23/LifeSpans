@@ -1,4 +1,4 @@
-#' Life Expectancies of Zoo Animals
+#' Mean Life Expectancy of Zoo Animals
 #'
 #' This package contains estimates of the average 
 #' life expectancy of over 300 zoo animals.
@@ -9,7 +9,7 @@ NULL
 
 #' "LifeSpans"
 #'
-#' A data set containing sex-specific sample sizes and mean life expectancies of 
+#' A data set containing sex-specific sample sizes and the mean life expectancy of 
 #' zoo animal species in North American zoos as of January, 2019.
 #'
 #'
